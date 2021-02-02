@@ -1,0 +1,91 @@
+@import 'config';
+@import 'utilities';
+@import 'loginPage';
+@import 'nav';
+@import 'projectList';
+@import 'projectArea';
+@import 'workArea';
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-stack;
+    @include set-background($light-color);
+}
+
+a {
+    text-decoration: none;
+
+    :hover {
+        text-decoration: none;
+    }
+}
+
+.dashboard {
+    margin-top: 1rem;
+}
+
+
+// Dashboard Page Start
+
+#createProjectModal {
+    display: none;
+
+    label {
+        padding-left: 5px;
+    }
+
+    .form-control {
+        box-shadow: none;
+        outline: none;
+    }
+    
+    .d-flex {
+        input {
+            margin: 0 5px;
+        }
+    }
+
+    .mt-4 {
+        float: right;
+    }
+
+    #addMoreInput {
+        display: none;
+    }
+
+    #closeProjectBtn{
+        position: absolute;
+        right: 20px;
+        top: 0;
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
+
+// Dashboard Page End
+
+// Project List Modal Start //
+#projectItemModal1,
+#projectItemModal2,
+#projectItemModal3 {
+    display: none;
+    .form-control {
+        box-shadow: none;
+        outline: none;
+    }
+    
+    .d-flex {
+        input {
+            margin: 0 5px;
+        }
+    }
+
+}
+// Project List Modal End //

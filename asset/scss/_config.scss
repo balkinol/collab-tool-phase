@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+$font-stack: 'Raleway', sans-serif;
+$light-color:#f4f4f4;
+$dark-color: #333;
+$white-color:#fff;
+$primary-color: rgb(46, 144, 241);
+$secondary-color: #FFD700;
+
+// Set text color based on bg
+@function set-text-color($color) {
+    @if(lightness($color) > 70) {
+        @return #333;
+    } @else {
+        @return #fff;
+    }
+}
+
+// Set bg & text color
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
+
+@mixin easeOut {
+    transition: ease-out .5s;
+}
+

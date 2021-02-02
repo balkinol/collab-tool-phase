@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colab Tool Phase 1</title>
+    <link rel="stylesheet" href="./asset/css/bootstrap.css">
+    <link rel="stylesheet" href="./asset/css/annotorious.css">
+    <link rel="stylesheet" href="./asset/css/theme-dark/annotorious-dark.css">
+    <link rel="stylesheet" href="./asset/css/main.css">
+    <script src="./asset/js/annotorious.min.js"></script>
+</head>
+<body>
+  <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-md">
+      <a class="navbar-brand" href="#"><img src="./asset/img/node-logo.png" alt="logo"></a>
+      <button  id="sidebarCollapse">
+            <p class="nav-line"></p>
+            <p class="nav-line"></p>
+            <p class="nav-line"></p>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" id="createProjectBtn" href="#">Create Project</a></li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link px-4" href="index.html">Sign Out</a></li>
+        </ul>
+      </div>
+    </nav>
+  <!-- Navbar End -->
+
+<div class="wrapper">
+
+     <!-- Sidebar Start -->
+     <div id="sidebar">
+        <a href="#" class="navbar-brand"><h3>Project A</h3></a>
+        <ul class="mr-auto">
+          <li><a href="#" class="nav-link">Member</a></li>
+          <li><a href="#" class="nav-link">Notification</a></li>
+          <li><a href="#" class="nav-link">Work Area</a></li>
+        </ul>
+        <ul>
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="work-area.html" class="nav-link">Work Area</a></li>
+        </ul>
+      </div>
+  <!-- Sidebar End -->
+  
+    <div class="content">
+        
+      <!-- Dashboard Start -->
+      <div class="dashboard">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-lg-4">
+                    <!-- Project List Area Start -->
+                    <div class="project-list-area">
+                      <ul id="projectList" class="list-group">
+                        <li class="list-group-item">
+                          <div class="project-item-btn">
+                            <span id="projectItemPlusBtn1">&plus;</span>
+                            <span id="projectItemTimesBtn1">&times;</span>
+                          </div>
+                          <div class="project-item-content">
+                            <h3>
+                              <a href="#" id="projectLinkBtn1">Project A</a>
+                            </h3>
+                            <div class="project-item-info">
+                              <p><strong>Members : </strong>3</p>
+                              <p><strong>Notification : </strong>5</p>
+                              <p><strong>Work Area : </strong>3</p>
+                          </div>  
+                        </div>   
+                          <div id="projectItemInfoBtn1">
+                            <div class="project-item-info-btn">
+                              <a href="#" class="btn btn-primary">Members</a>
+                              <a href="#" class="btn btn-primary">Notification</a>
+                              <a href="#" class="btn btn-primary">Work Area</a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="project-item-btn">
+                            <span id="projectItemPlusBtn2">&plus;</span>
+                            <span id="projectItemTimesBtn2">&times;</span>
+                          </div>
+                          <div class="project-item-content">
+                            <h3>
+                              <a href="#" id="projectLinkBtn2">Project B</a>
+                            </h3>
+                            <div class="project-item-info">
+                              <p><strong>Members : </strong>3</p>
+                              <p><strong>Notification : </strong>5</p>
+                              <p><strong>Work Area : </strong>3</p>
+                          </div>  
+                        </div>   
+                          <div id="projectItemInfoBtn2">
+                            <div class="project-item-info-btn">
+                              <a href="#" class="btn btn-primary">Members</a>
+                              <a href="#" class="btn btn-primary">Notification</a>
+                              <a href="#" class="btn btn-primary">Work Area</a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="list-group-item">
+                          <div class="project-item-btn">
+                            <span id="projectItemPlusBtn3">&plus;</span>
+                            <span id="projectItemTimesBtn3">&times;</span>
+                          </div>
+                          <div class="project-item-content">
+                            <h3>
+                              <a href="#" id="projectLinkBtn3">Project C</a>
+                            </h3>
+                            <div class="project-item-info">
+                              <p><strong>Members : </strong>3</p>
+                              <p><strong>Notification : </strong>5</p>
+                              <p><strong>Work Area : </strong>3</p>
+                          </div>  
+                        </div>   
+                          <div id="projectItemInfoBtn3">
+                            <div class="project-item-info-btn">
+                              <a href="#" class="btn btn-primary">Members</a>
+                              <a href="#" class="btn btn-primary">Notification</a>
+                              <a href="#" class="btn btn-primary">Work Area</a>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- Project List Area End -->
+                    </div>
+                  <div class="col-lg-8">
+                    <!-- Create Project Modal Start -->
+                    <div id="createProjectModal">
+                      <div class="card">
+                        <div class="card-body">
+                            <form id="addProject">
+                              <span id="closeProjectBtn">&times;</span>
+                                <div class="form-group">
+                                  <label for="projectName">Project Name</label>
+                                  <input type="text" class="form-control" id="projectName">
+                                </div>
+                                <div class="form-group">
+                                  <label>Invite</label>
+                                  <div class="d-flex">
+                                    <input type="email" class="form-control width-50" placeholder="Email Address">
+                                    <input type="text" class="form-control width-50" placeholder="Name">
+                                  </div>
+                                </div>
+                                <div class="form-group width-50" id="addMoreInput">
+                                  <div class="d-flex">
+                                    <input type="email" class="form-control" placeholder="Email Address">
+                                    <input type="text" class="form-control" placeholder="Name">
+                                  </div>
+                                </div>
+                                <a href="#" class="btn btn-primary btn-100" id="addMoreBtn">Add More</a>
+                                <input type="submit" class="btn btn-success mt-4" value="Save">
+                              </form>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Create Project Modal End -->
+                    <!-- Project List Modal Start -->
+                    <div id="projectItemModal1">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Project A</h5>
+                            <form>
+                                <div class="form-group">
+                                  <div class="d-flex">
+                                    <input type="email" class="form-control width-50" placeholder="Email Address">
+                                    <input type="text" class="form-control width-50" placeholder="Name">
+                                  </div>
+                                </div>
+                                <div class="form-group width-50" id="addMoreInput">
+                                  <div class="d-flex">
+                                    <input type="email" class="form-control" placeholder="Email Address">
+                                    <input type="text" class="form-control" placeholder="Name">
+                                  </div>
+                                </div>
+                                <div class="float-right">
+                                  <a href="#" class="btn btn-primary" id="addMoreBtn">Save</a>
+                                <a href="#" class="btn btn-success"  id="closeProjectItemBtn1">Cancel</a>
+                                </div>
+                              </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="projectItemModal2">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Project B</h5>
+                            <form>
+                                <div class="form-group">
+                                  <div class="d-flex">
+                                    <input type="email" class="form-control width-50" placeholder="Email Address">
+                                    <input type="text" class="form-control width-50" placeholder="Name">
+                                  </div>
+                                </div>
+                                <div class="form-group width-50" id="addMoreInput">
+                                  <div class="d-flex">
+                                    <input type="email" class="form-control" placeholder="Email Address">
+                                    <input type="text" class="form-control" placeholder="Name">
+                                  </div>
+                                </div>
+                                <div class="float-right">
+                                  <a href="#" class="btn btn-primary" id="addMoreBtn">Save</a>
+                                <a href="#" class="btn btn-success"  id="closeProjectItemBtn2">Cancel</a>
+                                </div>
+                              </form>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="projectItemModal3">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Project C</h5>
+                            <form>
+                                <div class="form-group">
+                                  <div class="d-flex">
+                                    <input type="email" class="form-control width-50" placeholder="Email Address">
+                                    <input type="text" class="form-control width-50" placeholder="Name">
+                                  </div>
+                                </div>
+                                <div class="form-group width-50" id="addMoreInput">
+                                  <div class="d-flex">
+                                    <input type="email" class="form-control" placeholder="Email Address">
+                                    <input type="text" class="form-control" placeholder="Name">
+                                  </div>
+                                </div>
+                                <div class="float-right">
+                                  <a href="#" class="btn btn-primary" id="addMoreBtn">Save</a>
+                                <a href="#" class="btn btn-success"  id="closeProjectItemBtn3">Cancel</a>
+                                </div>
+                              </form>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Project List Modal End -->
+                  </div>
+              </div>
+          </div>
+      </div>
+       <!-- Dashboard End -->
+
+    </div>
+</div>
+    
+
+    <script src="./asset/js/bootstrap.js"></script>
+    <script src="./asset/js/jquery.js"></script>
+    <script src="./asset/js/main.js"></script>
+    <script>
+      $(document).ready(function(){
+          $('#sidebarCollapse').on('click', function () {
+              // Sidebar
+              $('#sidebar').toggleClass('active');
+              $('.content').toggleClass('ml');
+              $('#sidebarCollapse').toggleClass('close'); 
+          });
+      });
+  </script>
+</body>
+</html>

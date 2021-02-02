@@ -1,0 +1,75 @@
+
+//  Project List Start //
+
+.project-list-area {
+    margin: 0 !important;
+    .project-item-btn {
+        float: right;
+        margin-right: 10px;
+
+        #projectItemPlusBtn1,
+        #projectItemPlusBtn2,
+        #projectItemPlusBtn3 {
+            font-size: 35px;
+            cursor: pointer;
+        }
+
+        #projectItemTimesBtn1,
+        #projectItemTimesBtn2,
+        #projectItemTimesBtn3 {
+            font-size: 30px;
+            cursor: pointer;
+            display: none;
+        }
+    }
+
+    #projectItemInfoBtn1,
+    #projectItemInfoBtn2,
+    #projectItemInfoBtn3{
+        display: none;
+        background-color: $dark-color;
+
+        .project-item-info-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px 0;
+    
+            a {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .list-group {
+        padding: 0 !important;
+        margin: 0 !important;
+    
+        .list-group-item {
+            margin-bottom: 10px;
+            padding: 0 !important;
+        }
+    
+        h3 {
+            padding: 10px;
+    
+            a {
+                @include set-background($white-color);
+                text-decoration: none;
+            }
+        }
+    }
+
+    .project-item-content {
+        padding: 1rem;
+    
+        .project-item-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+
+}
+
+//  Project List End //

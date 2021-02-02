@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+.form-control {
+  font-size: 14px;
+}
+
+.btn-100 {
+  width: 100%;
+}
+
+.login-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-page .card-img-top {
+  width: 80%;
+  margin: auto;
+}
+
+.login-page .card {
+  background-color: #f4f4f4;
+  color: #333;
+  width: 18rem;
+  margin: auto;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.login-page .form-control {
+  box-shadow: none;
+  outline: none;
+}
+
+.login-page .btn {
+  margin: 3px 0;
+}
+
+.navbar {
+  background-color: #f4f4f4;
+  color: #333;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 0;
+}
+
+.navbar a {
+  background-color: #f4f4f4;
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar #sidebarCollapse {
+  display: none;
+}
+
+.navbar .nav-link:hover {
+  color: #76b6f6;
+}
+
+.navbar .navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar .nav-line {
+  background-color: #333;
+  width: 25px;
+  height: 3px;
+  margin: 4px;
+  transition: ease-out .5s;
+}
+
+.navbar .navbar-brand {
+  margin: 0 2rem;
+}
+
+.navbar .navbar-brand img {
+  width: 120px;
+}
+
+#sidebar {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: #666666;
+  color: #fff;
+  transition: ease-out .5s;
+}
+
+#sidebar h3 {
+  margin: 0;
+  padding: 10px;
+}
+
+#sidebar a {
+  background-color: #666666;
+  color: #fff;
+  text-decoration: none;
+}
+
+#sidebar .nav-link:hover {
+  color: #2e90f1;
+}
+
+#sidebar ul {
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  .wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    overflow-x: hidden !important;
+  }
+  #sidebar {
+    transition: ease-out .5s;
+    display: block;
+    position: fixed;
+    width: 250px;
+    left: -250px;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  #sidebar .navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #f4f4f4;
+  }
+  #sidebar ul {
+    margin-top: 2rem;
+    display: block;
+    align-items: center;
+    list-style: none;
+  }
+  .content {
+    transition: ease-out .5s;
+    min-width: 100vw;
+    margin-top: 4rem;
+  }
+  .dashboard {
+    margin-top: 1rem;
+  }
+  #sidebar.active {
+    left: 0;
+  }
+  #sidebarCollapse {
+    display: block !important;
+    outline: none;
+    border: none;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: ease-out .5s;
+  }
+  #sidebarCollapse.close {
+    transform: rotate(180deg);
+    transition: ease-out .5s;
+  }
+  .close > .nav-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    background-color: #333;
+  }
+  .close > .nav-line:nth-child(2) {
+    opacity: 0;
+  }
+  .close > .nav-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    background-color: #333;
+  }
+  .ml {
+    margin-left: 250px;
+  }
+}
+
+.project-list-area {
+  margin: 0 !important;
+}
+
+.project-list-area .project-item-btn {
+  float: right;
+  margin-right: 10px;
+}
+
+.project-list-area .project-item-btn #projectItemPlusBtn1,
+.project-list-area .project-item-btn #projectItemPlusBtn2,
+.project-list-area .project-item-btn #projectItemPlusBtn3 {
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.project-list-area .project-item-btn #projectItemTimesBtn1,
+.project-list-area .project-item-btn #projectItemTimesBtn2,
+.project-list-area .project-item-btn #projectItemTimesBtn3 {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.project-list-area #projectItemInfoBtn1,
+.project-list-area #projectItemInfoBtn2,
+.project-list-area #projectItemInfoBtn3 {
+  display: none;
+  background-color: #333;
+}
+
+.project-list-area #projectItemInfoBtn1 .project-item-info-btn,
+.project-list-area #projectItemInfoBtn2 .project-item-info-btn,
+.project-list-area #projectItemInfoBtn3 .project-item-info-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.project-list-area #projectItemInfoBtn1 .project-item-info-btn a,
+.project-list-area #projectItemInfoBtn2 .project-item-info-btn a,
+.project-list-area #projectItemInfoBtn3 .project-item-info-btn a {
+  font-size: 14px;
+}
+
+.project-list-area .list-group {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.project-list-area .list-group .list-group-item {
+  margin-bottom: 10px;
+  padding: 0 !important;
+}
+
+.project-list-area .list-group h3 {
+  padding: 10px;
+}
+
+.project-list-area .list-group h3 a {
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+}
+
+.project-list-area .project-item-content {
+  padding: 1rem;
+}
+
+.project-list-area .project-item-content .project-item-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.project-list-area {
+  margin: 1rem;
+}
+
+.project-list-area .card {
+  width: 100%;
+  padding: 5px;
+  margin: 1rem auto;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.project-list-area .card-title {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.project-list-area .card-img-top {
+  width: 100%;
+}
+
+.project-list-area .card-img-top:hover {
+  transform: scale(0.98) !important;
+}
+
+.project-list-area .btn-success {
+  float: left;
+}
+
+.project-list-area .btn-danger {
+  float: right;
+}
+
+.work-area {
+  margin-top: 1rem;
+}
+
+.work-area .list-group {
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2), 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.work-area .list-group #workBtnLink1 {
+  cursor: pointer;
+}
+
+.work-area .list-group #workBtnLink2 {
+  cursor: pointer;
+}
+
+.work-area .list-group #workBtnLink3 {
+  cursor: pointer;
+}
+
+.work-area img {
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+a :hover {
+  text-decoration: none;
+}
+
+.dashboard {
+  margin-top: 1rem;
+}
+
+#createProjectModal {
+  display: none;
+}
+
+#createProjectModal label {
+  padding-left: 5px;
+}
+
+#createProjectModal .form-control {
+  box-shadow: none;
+  outline: none;
+}
+
+#createProjectModal .d-flex input {
+  margin: 0 5px;
+}
+
+#createProjectModal .mt-4 {
+  float: right;
+}
+
+#createProjectModal #addMoreInput {
+  display: none;
+}
+
+#createProjectModal #closeProjectBtn {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#projectItemModal1,
+#projectItemModal2,
+#projectItemModal3 {
+  display: none;
+}
+
+#projectItemModal1 .form-control,
+#projectItemModal2 .form-control,
+#projectItemModal3 .form-control {
+  box-shadow: none;
+  outline: none;
+}
+
+#projectItemModal1 .d-flex input,
+#projectItemModal2 .d-flex input,
+#projectItemModal3 .d-flex input {
+  margin: 0 5px;
+}
